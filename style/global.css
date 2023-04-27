@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;800&display=swap');
+
+html {
+	background: rgb(14, 49, 82);
+    background-image: url("../img/bg.jpg");
+	color: rgb(255, 255, 255);
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+body {
+	width: 90%;
+	max-width: 1440px;
+	margin: auto;
+}
+
+#site-header{
+    font-size: 30px;
+	text-align: center;
+    font-weight: 800;
+}
+#site-header p,footer{
+    background: rgb(14, 49, 82);
+    padding: 1em 2em;
+    margin: .7em 0;
+    opacity: 0.8;
+}
+#site-header p:hover{
+    opacity: 1;
+    background-color: white;
+    color: rgb(14, 49, 82);
+}
+
+
+#navigation-bar {
+	background-color: rgb(255, 255, 255);
+	padding: 1em 2em;
+    margin-bottom: 1em;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+    
+}
+	#navigation-bar ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	#navigation-bar li {
+		display: inline;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+	#navigation-bar a {
+		color:rgb(14, 49, 82);
+    text-decoration: none;
+    font-weight: bold;
+	}
+    #navigation-bar a:hover{
+        background-color: thistle;
+        padding: .5em 0;
+        color: rgb(255, 240, 190);
+    }
+
+    main{
+        background-color: rgb(14, 49, 82);
+        padding-top: 1em;
+    }
+    article{
+        width: 90%;
+        margin: auto;
+    }
+    
+    article p{
+        margin:0 0 1em 0;
+    }
+    article img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .words::first-letter{
+        font-size: x-large;
+    }
+    
+    .conclusion{
+        font-size: 20px;
+        text-align: center;
+        padding: .5em 0;
+        margin: 1em;
+        border: 2px outset rgb(255, 255, 255);
+        border-radius: 50px;
+    }
+    
+    .fig-float-left {
+            border: 10px outset rgb(0, 0, 0);
+            margin: 0 1em 0 0;
+            width: 300px;
+            float: left;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .fig-float-left img {
+            width: 300px;
+            height: 300px;
+            vertical-align: bottom;
+        }
+     
+        .clear-left-float::after {
+            clear: left;
+            display: block;
+            height: 1em;
+            content: '';
+             
+        }
+        .clear-left-float{
+            background-color: rgb(21, 63, 103);
+            opacity: 0.9;
+        }
+        .clear-left-float p {
+            color: white;
+            margin:1.5em;
+        }
+
+        ol{
+            list-style-type: upper-roman;
+        }
+
+        ul{
+            list-style-type: circle;
+        }
+    
+        main ol li a{
+            color:rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        main ol li a:hover{
+        background-color: #FBE7F4;
+        padding: 0;
+        color: rgb(255, 157, 0);
+        }
+    
+        #returntop a{
+            color: white;
+        }
+    
+        .words2::first-letter{
+            font-size: x-large;
+        }
+        .container {
+            height: 430px; 
+            border: 10px outset rgb(0, 0, 0); 
+            display: flex;
+            justify-content: center;
+            }
+
+            .container img{
+                width: 35%;
+            }
+    
+        .clear-right-float-text::before{
+            clear: right;
+            display: block;
+            height: 1.5em;
+        }
+        .clear-right-float-text{
+            background-color: rgb(21, 63, 103);
+            opacity: 0.9;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        .clear-right-float-text::first-letter{
+            font-size: x-large;
+        }
+        #words3{
+            margin:0 1em 0 1em;
+        }
+        section{
+            margin: 1em;
+        }
+        .flex-container{
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 auto;
+          }
+          
+          .flex-container div {
+            flex: 0 1 23%;
+	        margin: 1%;
+          }
+          .flex-container figure{
+            width: 100%;
+	        height: auto;
+            margin: 0;
+          }
+          .flex-container p{
+            font-size: 12px;
+          }
+          .flex-container section{
+            margin: 1em 0 1em 0;
+            height: 200px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+          }
+          #Container{
+            width: 100%;
+            display: flex;
+            flex-flow: nowrap;
+            margin: 0 auto;
+          }
+          #Container div{
+            flex: 0 1 23%;
+	        margin: 1%;
+          }
+          #Container div img{
+            width: 300px;
+            border: 5px double white;
+          }
+          strong{
+            font-size: large;
+            font-weight: 800;
+          }
+          em{
+            color: rgb(255, 225, 127);
+          }
+         h1{
+            text-transform: capitalize;
+            color: #ffe17f;
+            text-shadow: 2px 2px 5px rgb(255, 225, 127);
+         }
+         .zodiac{
+            margin: 1em;
+         }
+         
