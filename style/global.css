@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;800&display=swap');
 :root{
     --light-green:#68B0AB;
+    --dark-green:#3d807b;
     --cream:#ffffee;
     --cream-dark:#d3c9a7;
     --cream-darker:#a6996f;
@@ -33,23 +34,6 @@ body {
     animation: transitionIn 1s;
 }
 
-/* .btn{
-    background: white;
-    color: #222;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid black;
-    padding:10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.btn:hover{
-    background: black;
-    color: white;
-} */
 img{
     width: auto;
     height: 70vh;
@@ -64,7 +48,7 @@ img{
     height: 2em;
     border: 0;
     border-radius: 30px;
-    box-shadow: 0px 8px 3px rgba(116, 230, 222, 0.75);
+    box-shadow: 0px 8px 3px var(--cream-dark);
     background-color: var(--cream);
     margin-left: 35vw; 
     font-family: 'Sansita Swashed', cursive;
@@ -89,11 +73,13 @@ img{
 #btn:hover,#nextbtn:hover{
      background-color: var(--cream-dark);
      box-shadow: 0px 8px 3px var(--cream-darker);
+     cursor: pointer;
 }
 #btn:active,#nextbtn:active{
     background-color: var(--cream-dark);
     box-shadow: 0px 8px 3px var(--cream-darker);
     transform: translateY(3px);
+    cursor: pointer;
 }
 #btn a{
     text-decoration: none;
@@ -103,22 +89,37 @@ img{
     display: none;
     
 }
+#info{
+   background-color: var(--dark-green);
+   border-radius: 0 0 20px 20px;
+}
 #pageContainer{
     display: flex;
-
 }
 
+#question{
+    background-color: var(--dark-green);
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 0;
+    padding:0.5em 1em;
+}
 .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     height: 40vh;
+    background-color: var(--dark-green);
+    border-radius: 0 0 20px 20px;
+    background-image: url("../img/bg2.png");
 }
 .radio-tile-group{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: var(--dark-green);
+    padding: 2em;
+    border-radius: 20px;
 }
 .input-container{
     position: relative;
@@ -126,6 +127,7 @@ img{
     width: 7rem;
     margin: 0.5rem;
     text-align: center;
+    background-color: var(--dark-green);
 }
 .input-container input{
     position: absolute;
@@ -162,8 +164,7 @@ input:checked+.radio-tile label{
 .infoform{
     margin-left: 35vw;
     font-size: 20px;
-    margin-bottom: 1em;
-
+    padding: 1em;
 }
 
 
