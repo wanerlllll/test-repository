@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style/global.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style/global.css" />
+  </head>
+  <body>
+    <div id="pageContainer">
+      <div class="theImg">
+          <img src="img/Dizzy face-cuate.png">
+      </div>
+
+      <div>
     <h1 id="question">Do you often feel tired?</h1>
     <form action="result.html" method="get">
-    <div class="container">
+      <div class="container">
         <div class="radio-tile-group">
-
-            <div class="input-container">
-            <input id="answers" type="radio" name="radio" required>
+          <div class="input-container" onclick="q0(-1,'Good job!')">
+            <input id="answers" type="radio" name="radio" required />
             <div class="radio-tile">
-                <label for="answers">A. Yes </label>
+              <label for="answers">A. Yes </label>
             </div>
-            </div>
+          </div>
 
-            <div class="input-container">
-            <input class="answers" type="radio" name="radio" required>
+          <div
+            class="input-container"
+            onclick="q0(0,'You have to eat breakfast.')"
+          >
+            <input class="answers" type="radio" name="radio" required />
             <div class="radio-tile">
-                <label for="answers">B. No</label>
+              <label for="answers">B. No</label>
             </div>
-            </div>
-
-            
+          </div>
         </div>
+      </div>
+      <button id="nextbtn" type="submit">Submit</button>
+    </form>
     </div>
-    <button id="nextbtn" type="submit">Submit</button>
-</form>
 
-        <script>
-            let answered=document.getElementsByClassName('input-container');
-            let nextbtn=document.getElementById("nextbtn");
-            for(i=0;i<answered.length;i++){
-            answered[i].addEventListener("click",function(){
-                nextbtn.style.display="inline";
-            })};
-        </script>
-</body>
+    <script src="scripts/script.js"></script>
+    <script>
+      function q0(val, text) {
+        localStorage.setItem('val9', val)
+        localStorage.setItem('text9', text)
+      }
+    </script>
+  </body>
 </html>

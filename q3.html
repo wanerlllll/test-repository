@@ -8,32 +8,38 @@
     <link rel="stylesheet" type="text/css" href="style/global.css">
 </head>
 <body>
+    <div id="pageContainer">
+        <div class="theImg">
+            <img src="img/Diet-cuate.png">
+        </div>
+
+        <div>
     <h1 id="question">Which of the following is your daily diet?</h1>
     <form action="q4.html" method="get">
     <div class="container">
         <div class="radio-tile-group">
 
-            <div class="input-container">
+            <div class="input-container" onclick="q3(-1,'You need to eat less high-fat and high-salt foods')">
             <input id="answers" type="radio" name="radio" required>
             <div class="radio-tile">
                 <label for="answers">A. High in oil and salt </label>
             </div>
             </div>
 
-            <div class="input-container">
+            <div class="input-container" onclick="q3(-1,'Your diet should be blander')">
             <input class="answers" type="radio" name="radio" required>
             <div class="radio-tile">
                 <label for="answers">B. Very spicy</label>
             </div>
             </div>
 
-            <div class="input-container">
+            <div class="input-container" onclick="q3(-1,'Try to balance your diet by eating more fruit and less protein.')">
                 <input class="answers" type="radio" name="radio" required>
                 <div class="radio-tile">
                     <label for="answers">C. I only like meat</label>
                 </div>
             </div>
-            <div class="input-container">
+            <div class="input-container" onclick="q3(0,'You have very good diet, please keep up')">
                 <input class="answers" type="radio" name="radio" required>
                 <div class="radio-tile">
                     <label for="answers">D. None of the above</label>
@@ -43,14 +49,14 @@
     </div>
     <button id="nextbtn" type="submit">Submit</button>
 </form>
+</div>
 
-        <script>
-            let answered=document.getElementsByClassName('input-container');
-            let nextbtn=document.getElementById("nextbtn");
-            for(i=0;i<answered.length;i++){
-            answered[i].addEventListener("click",function(){
-                nextbtn.style.display="inline";
-            })};
-        </script>
+<script src="scripts/script.js"></script>
+<script>
+  function q3(val, text) {
+    localStorage.setItem('val2', val)
+    localStorage.setItem('text2', text)
+  }
+</script>
 </body>
 </html>

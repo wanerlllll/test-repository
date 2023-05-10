@@ -8,10 +8,61 @@
     <link rel="stylesheet" type="text/css" href="style/global.css">
 </head>
 <body>
-    <h1>Score:</h1>
-    <p id="suggestion">Suggestions:</p>
+    <h1 id="sum"></h1>
+    <p id="suggestion"></p>
     <button id="btn"><a href="q1.html">Test again</a></button>
 
     <script src="scripts/script.js"></script>
-</body>
+    <script>
+      let sum = document.getElementById('sum')
+      let suggestion = document.getElementById('suggestion')
+      getSum()
+      function getSum() {
+        console.log(
+          Number(localStorage.getItem('val1')) +
+            Number(localStorage.getItem('val2'))
+        )
+        let numerical =
+          Number(localStorage.getItem('val1')) +
+          Number(localStorage.getItem('val2')) +
+          Number(localStorage.getItem('val3')) +
+          Number(localStorage.getItem('val4')) +
+          Number(localStorage.getItem('val5')) +
+          Number(localStorage.getItem('val6')) +
+          Number(localStorage.getItem('val7')) +
+          Number(localStorage.getItem('val8')) +
+          Number(localStorage.getItem('val9'))
+        let text =
+          '<br />' +
+          localStorage.getItem('text1') +
+          '<br />' +
+          localStorage.getItem('text2') +
+          '<br />' +
+          localStorage.getItem('text3') +
+          '<br />' +
+          localStorage.getItem('text4') +
+          '<br />' +
+          localStorage.getItem('text5') +
+          '<br />' +
+          localStorage.getItem('text6') +
+          '<br />' +
+          localStorage.getItem('text7') +
+          '<br />' +
+          localStorage.getItem('text8') +
+          '<br />' +
+          localStorage.getItem('text9')
+        sum.innerHTML = 'Score: ' + numerical
+        suggestion.innerHTML = 'Suggestions: ' + text
+        // localStorage.setItem('text9', text)
+      }
+      //   function sumDigits(number) {
+      //     return Math.abs(number)
+      //       .toString()
+      //       .split('')
+      //       .reduce(function (a, b) {
+      //         return parseInt(a) + parseInt(b)
+      //       }, 0)
+      //   }
+    </script>
+  </body>
 </html>

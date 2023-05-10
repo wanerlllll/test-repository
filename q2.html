@@ -9,40 +9,54 @@
 </head>
 
 <body>
+    <div id="pageContainer">
+    <div class="theImg">
+        <img src="img/Training at home-cuate.png">
+    </div>
+    <div>
     <h1 id="question">How long do you exercise every day?</h1>
+    
+    
     <form action="q3.html" method="get">
     <div class="container">
         <div class="radio-tile-group">
 
-            <div class="input-container">
+            <div class="input-container" onclick="q2(-1,'You should exercise more')">
+                
             <input id="answers" type="radio" name="radio" required>
             <div class="radio-tile">
                 <label for="answers">A. 0-10min </label>
             </div>
             </div>
 
-            <div class="input-container">
+            <div class="input-container" onclick="q2(-1,'You should exercise more')">
                 <input class="answers" type="radio" name="radio" required>
                 <div class="radio-tile">
                     <label for="answers">B. 10-30min</label>
                 </div>
                 </div>
 
-                <div class="input-container">
+                <div class="input-container" onclick="q2(0,'You are getting the right amount of exercise every day, please keep it up!')">
                     <input class="answers" type="radio" name="radio" required>
                     <div class="radio-tile">
                         <label for="answers">C. 30min+</label>
                     </div>
                     </div>
-        </div>
-    </div>
+    
+    </div></div>
     <button id="nextbtn" type="submit" onclick="generateResult()">Submit</button>
 </form>
-       
-<p id="suggestion"></p>
-        <script src="scripts/script.js">
-       
-        </script>
+
+</div>
+
+
+        <script src="scripts/script.js"></script>
+        <script>
+            function q2(val, text) {
+              localStorage.setItem('val1', val)
+              localStorage.setItem('text1', text)
+            }
+          </script>
    
 
 </body>

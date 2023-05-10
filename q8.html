@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style/global.css">
-</head>
-<body>
-    <h1 id="question">How long do you usually need to have a bowel movement？</h1>
+    <link rel="stylesheet" type="text/css" href="style/global.css" />
+  </head>
+  <body>
+    <div id="pageContainer">
+      <div class="theImg">
+          <img src="img/Overwhelmed-cuate.png">
+      </div>
+
+      <div>
+    <h1 id="question">
+      How long do you work per week？
+    </h1>
     <form action="q9.html" method="get">
-    <div class="container">
+      <div class="container">
         <div class="radio-tile-group">
-
-            <div class="input-container">
-            <input id="answers" type="radio" name="radio" required>
+          <div class="input-container" onclick="q8(-1,'Good job!')">
+            <input id="answers" type="radio" name="radio" required />
             <div class="radio-tile">
-                <label for="answers">A. less than 5min </label>
+              <label for="answers">A. 30-40 hours </label>
             </div>
-            </div>
+          </div>
 
-            <div class="input-container">
-            <input class="answers" type="radio" name="radio" required>
+          <div
+            class="input-container"
+            onclick="q8(-0.5,'You have to eat breakfast.')"
+          >
+            <input class="answers" type="radio" name="radio" required />
             <div class="radio-tile">
-                <label for="answers">B. 5-10min</label>
+              <label for="answers">B. 40-50 hours</label>
             </div>
-            </div>
+          </div>
 
-            <div class="input-container">
-                <input class="answers" type="radio" name="radio" required>
-                <div class="radio-tile">
-                    <label for="answers">C. more than 10min</label>
-                </div>
+          <div
+            class="input-container"
+            onclick="q8(0,'You have to eat breakfast.')"
+          >
+            <input class="answers" type="radio" name="radio" required />
+            <div class="radio-tile">
+              <label for="answers">C. 50-60 hours</label>
             </div>
-                
+          </div>
         </div>
-    </div>
-    <button id="nextbtn" type="submit">Submit</button>
-</form>
+      </div>
+      <button id="nextbtn" type="submit">Submit</button>
+    </form>
+      </div>
 
-        <script>
-
-            let answered=document.getElementsByClassName('input-container');
-            let nextbtn=document.getElementById("nextbtn");
-            for(i=0;i<answered.length;i++){
-            answered[i].addEventListener("click",function(){
-                nextbtn.style.display="inline";
-            })};
-        </script>
-</body>
+    <script src="scripts/script.js"></script>
+    <script>
+      function q8(val, text) {
+        localStorage.setItem('val7', val)
+        localStorage.setItem('text7', text)
+      }
+    </script>
+  </body>
 </html>
