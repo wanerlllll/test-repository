@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style/global.css">
+</head>
+
+<body>
+    <h1 id="question">How long do you exercise every day?</h1>
+    <form action="q3.html" method="get">
+    <div class="container">
+        <div class="radio-tile-group">
+
+            <div class="input-container">
+            <input id="answers" type="radio" name="radio" required>
+            <div class="radio-tile">
+                <label for="answers">A. 0-10min </label>
+            </div>
+            </div>
+
+            <div class="input-container">
+                <input class="answers" type="radio" name="radio" required>
+                <div class="radio-tile">
+                    <label for="answers">B. 10-30min</label>
+                </div>
+                </div>
+
+                <div class="input-container">
+                    <input class="answers" type="radio" name="radio" required>
+                    <div class="radio-tile">
+                        <label for="answers">C. 30min+</label>
+                    </div>
+                    </div>
+        </div>
+    </div>
+    <button id="nextbtn" type="submit" onclick="generateResult()">Submit</button>
+</form>
+       
+<p id="suggestion"></p>
+        <script src="scripts/script.js">
+       
+        </script>
+   
+
+</body>
+</html>

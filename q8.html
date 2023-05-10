@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style/global.css">
+</head>
+<body>
+    <h1 id="question">How long do you usually need to have a bowel movement？</h1>
+    <form action="q9.html" method="get">
+    <div class="container">
+        <div class="radio-tile-group">
+
+            <div class="input-container">
+            <input id="answers" type="radio" name="radio" required>
+            <div class="radio-tile">
+                <label for="answers">A. less than 5min </label>
+            </div>
+            </div>
+
+            <div class="input-container">
+            <input class="answers" type="radio" name="radio" required>
+            <div class="radio-tile">
+                <label for="answers">B. 5-10min</label>
+            </div>
+            </div>
+
+            <div class="input-container">
+                <input class="answers" type="radio" name="radio" required>
+                <div class="radio-tile">
+                    <label for="answers">C. more than 10min</label>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <button id="nextbtn" type="submit">Submit</button>
+</form>
+
+        <script>
+
+            let answered=document.getElementsByClassName('input-container');
+            let nextbtn=document.getElementById("nextbtn");
+            for(i=0;i<answered.length;i++){
+            answered[i].addEventListener("click",function(){
+                nextbtn.style.display="inline";
+            })};
+        </script>
+</body>
+</html>
