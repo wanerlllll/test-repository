@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style/global.css">
 </head>
-<body>
+<body id="end">
     <h1 id="sum"></h1>
     <p id="suggestion"></p>
     <button id="btn"><a href="q1.html">Test again</a></button>
@@ -22,7 +22,7 @@
           Number(localStorage.getItem('val1')) +
             Number(localStorage.getItem('val2'))
         )
-        let numerical =
+        let numerical =(10+(
           Number(localStorage.getItem('val1')) +
           Number(localStorage.getItem('val2')) +
           Number(localStorage.getItem('val3')) +
@@ -31,27 +31,27 @@
           Number(localStorage.getItem('val6')) +
           Number(localStorage.getItem('val7')) +
           Number(localStorage.getItem('val8')) +
-          Number(localStorage.getItem('val9'))
+          Number(localStorage.getItem('val9'))))*10
         let text =
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text1') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text2') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text3') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text4') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text5') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text6') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text7') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text8') +
-          '<br />' +
+          '<br />' + '<hr>'+
           localStorage.getItem('text9')
-        sum.innerHTML = 'Score: ' + numerical
+        sum.innerHTML = 'Score: ' + numerical + '/100'
         suggestion.innerHTML = 'Suggestions: ' + text
         // localStorage.setItem('text9', text)
       }
