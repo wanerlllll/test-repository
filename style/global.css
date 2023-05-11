@@ -91,7 +91,7 @@ img{
 }
 #info{
    background-color: var(--dark-green);
-   border-radius: 0 0 20px 20px;
+   border-radius: 0 20px 20px 20px;
 }
 #pageContainer{
     display: flex;
@@ -180,4 +180,6 @@ hr{
     margin-top: 3em;
     border-radius: 20px;
 }
-
+#coverImg{
+    outline: 2em solid var(--dark-green);
+}
